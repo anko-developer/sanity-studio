@@ -61,7 +61,17 @@ export default defineField({
       authorUsername: 'author.username',
       media: 'photo',
     },
-    prepare({title, authorName, authorUsername, media}) {
+    prepare({
+      title,
+      authorName,
+      authorUsername,
+      media,
+    }: {
+      title: string
+      authorName: string
+      authorUsername: string
+      media: string
+    }) {
       return {
         title,
         subtitle: `by ${authorName} (${authorUsername})`,
